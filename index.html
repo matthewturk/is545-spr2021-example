@@ -15,7 +15,7 @@
         var yourVlSpec =
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"values": movies},
+  "data": {"url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/movies.json"},
   "mark": {"type": "bar"},
   "encoding": {
     "x": {"field": "Running Time min", "type": "quantitative", "bin": true},
