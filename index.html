@@ -11,4 +11,21 @@
         <button id="addvis">Add Vis</button>
 
     </body>
+    <script>
+        var yourVlSpec =
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"values": movies},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "Running Time min", "type": "quantitative", "bin": true},
+    "y": {"aggregate": "count", "type": "quantitative"}
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("addvis").addEventListener("click", (event) => {
+        var embedded = vegaEmbed('#vis', yourVlSpec);
+    });
+});
+    </script>
 </html>
